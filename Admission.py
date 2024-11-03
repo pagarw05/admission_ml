@@ -7,6 +7,12 @@ import pickle
 import warnings
 warnings.filterwarnings('ignore')
 
+# Add password to access the app
+password_guess = st.text_input("What is the Password?")
+if password_guess != st.secrets["password"]:
+   st.stop()
+
+
 
 # Set up the app title and image
 st.title('Graduate Admission Predictor 🌟')
